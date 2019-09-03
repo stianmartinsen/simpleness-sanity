@@ -15,8 +15,7 @@ export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
-      description
-      keywords
+      socialMediaLinks
     }
     projects: allSanityProject(
       limit: 6
