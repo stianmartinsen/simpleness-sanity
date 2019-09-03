@@ -20,6 +20,7 @@ function Project (props) {
               .width(1200)
               .height(Math.floor((9 / 16) * 1200))
               .fit('crop')
+              .auto('format')
               .url()}
             alt={mainImage.alt}
           />
