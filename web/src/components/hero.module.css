@@ -11,7 +11,7 @@
   }
 
   @nest & h1 {
-    font-family: var(--font-family-off-white);
+    font-weight: 300;
   }
 
   @nest & a {

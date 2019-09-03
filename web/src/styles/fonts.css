@@ -39,11 +39,3 @@
   font-weight: 300;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'Basis Grotesque Off White';
-  src: url('../fonts/basisgrotesque/BasisGrotesque-OffWhite.woff2') format('woff2'),
-      url('../fonts/basisgrotesque/BasisGrotesque-OffWhite.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
