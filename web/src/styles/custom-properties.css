@@ -1,5 +1,6 @@
 :root {
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-sans: 'Basis Grotesque', 'helvetica neue', sans-serif;
+  --font-family-special: 'Basis Grotesque Mono', 'helvetica neue', sans-serif;
 
   --color-black: #202123;
   --color-dark-gray: #32373e;
@@ -8,6 +9,9 @@
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
   --color-accent: #156dff;
+  --color-green: #475741;
+
+  --color-background: #F7F7F3;
 
   /* Typography */
   --unit: 16;
