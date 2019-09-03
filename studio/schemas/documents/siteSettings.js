@@ -25,5 +25,10 @@ export default {
         }
       ]
     },
+    {
+      name: 'contactEmail',
+      type: 'email',
+      title: 'Email address',
+    },
   ]
 }

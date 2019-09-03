@@ -6,6 +6,11 @@ const query = graphql`
   query SiteTitleQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
+      socialMediaLinks {
+        title
+        url
+      }
+      contactEmail
     }
   }
 `

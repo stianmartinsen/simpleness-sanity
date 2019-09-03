@@ -8,9 +8,7 @@ function SEO ({description, lang, meta, keywords, title}) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription = description || (data.site && data.site.description) || ''
         const siteTitle = (data.site && data.site.title) || ''
-        const siteAuthor = (data.site && data.site.author && data.site.author.name) || ''
         return (
           <Helmet
             htmlAttributes={{lang}}
@@ -18,16 +16,8 @@ function SEO ({description, lang, meta, keywords, title}) {
             titleTemplate={title === siteTitle ? '%s' : `%s | ${siteTitle}`}
             meta={[
               {
-                name: 'description',
-                content: metaDescription
-              },
-              {
                 property: 'og:title',
                 content: title
-              },
-              {
-                property: 'og:description',
-                content: metaDescription
               },
               {
                 property: 'og:type',
@@ -38,26 +28,10 @@ function SEO ({description, lang, meta, keywords, title}) {
                 content: 'summary'
               },
               {
-                name: 'twitter:creator',
-                content: siteAuthor
-              },
-              {
                 name: 'twitter:title',
                 content: title
               },
-              {
-                name: 'twitter:description',
-                content: metaDescription
-              }
             ]
-              .concat(
-                keywords && keywords.length > 0
-                  ? {
-                    name: 'keywords',
-                    content: keywords.join(', ')
-                  }
-                  : []
-              )
               .concat(meta)}
           />
         )
@@ -86,11 +60,6 @@ const detailsQuery = graphql`
   query DefaultSEOQuery {
     site: sanitySiteSettings(_id: {eq: "siteSettings"}) {
       title
-      description
-      keywords
-      author {
-        name
-      }
     }
   }
 `
