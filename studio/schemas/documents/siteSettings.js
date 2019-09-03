@@ -15,6 +15,11 @@ export default {
       title: 'Title'
     },
     {
+      name: 'heroContent',
+      type: 'simplePortableText',
+      title: 'Frontpage hero content'
+    },
+    {
       name: 'socialMediaLinks',
       type: 'array',
       title: 'Social media links',
@@ -28,7 +33,7 @@ export default {
     {
       name: 'contactEmail',
       type: 'email',
-      title: 'Email address',
+      title: 'Email address'
     },
   ]
 }

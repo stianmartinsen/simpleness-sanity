@@ -20,7 +20,10 @@ export default {
       // corrensponds with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
       // use your content.
-      styles: [{title: 'Normal', value: 'normal'}],
+      styles: [
+        {title: 'Normal', value: 'normal'},
+        {title: 'H1', value: 'h1'}
+      ],
       lists: [],
       // Marks let you mark up inline text in the block editor.
       marks: {
@@ -28,11 +31,23 @@ export default {
         // preference or highlighting by editors.
         decorators: [
           {title: 'Strong', value: 'strong'},
-          {title: 'Emphasis', value: 'em'},
-          {title: 'Code', value: 'code'}
+          {title: 'Emphasis', value: 'em'}
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
-        annotations: []
+        annotations: [
+          {
+            title: 'URL',
+            name: 'link',
+            type: 'object',
+            fields: [
+              {
+                title: 'URL',
+                name: 'href',
+                type: 'url'
+              }
+            ]
+          }
+        ]
       }
     }
   ]

@@ -9,12 +9,14 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
+import Hero from '../components/hero'
 import Layout from '../containers/layout'
 
 export const query = graphql`
   query IndexPageQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
+      _rawHeroContent
     }
     projects: allSanityProject(
       limit: 6
@@ -83,14 +85,18 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <SEO title={site.title} description={site.description} keywords={site.keywords} />
+      <SEO
+        title={site.title}
+        bodyClass='index'
+      />
+
+      <Hero _rawHeroContent={site._rawHeroContent} />
+
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
         {projectNodes && (
           <ProjectPreviewGrid
-            title='Latest projects'
             nodes={projectNodes}
-            browseMoreHref='/archive/'
+            browseMoreHref='/prosjekter'
           />
         )}
       </Container>

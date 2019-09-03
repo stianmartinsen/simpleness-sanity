@@ -1,0 +1,20 @@
+.root {
+  background-color: var(--color-green);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--color-white);
+
+  @nest & div {
+    width: 100%;
+  }
+
+  @nest & h1 {
+    font-family: var(--font-family-off-white);
+  }
+
+  @nest & a {
+    color: inherit;
+  }
+}
