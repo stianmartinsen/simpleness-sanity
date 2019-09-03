@@ -6,12 +6,12 @@ import logo from '../img/simpleness-logo.gif'
 
 import styles from './header.module.css'
 
-const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
+const Header = ({onHideNav, onShowNav, showNav}) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
         <Link to='/'>
-          <img src={logo} alt="Simpleness Logo" />
+          <img src={logo} alt='Simpleness Logo' />
         </Link>
       </div>
 
